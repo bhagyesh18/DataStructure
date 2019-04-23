@@ -1,5 +1,8 @@
 package Collection;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+
 import javax.print.attribute.standard.Finishings;
 
 class BSTNode{
@@ -115,6 +118,24 @@ class BSTNode{
 	       printLeafNodes(root.right);
 	}
 	
+	
+	// Print key each level
+		public static void levelOrder(BSTNode root) {
+	        LinkedList<BSTNode> queue=new LinkedList<BSTNode>();
+	        if(root==null){
+	            return ;
+	        }
+	        queue.add(root);
+	        while(queue.size()!=0){
+	        	BSTNode temp=queue.poll();
+	             System.out.print(temp.key+" ");
+	             if(temp.left!=null)
+	                 queue.add(temp.left);
+	             if(temp.right!=null)
+	                queue.add(temp.right);
+	        }
+	    }
+	  
 	
 	public int numberOfNodes(BSTNode root) {
 		int count=1;
@@ -239,6 +260,25 @@ class BSTNode{
 		return true;
 	}
 	
+	
+	 boolean checkBST(BSTNode root) {
+	       return ISBST(root,Integer.MIN_VALUE,10000);
+	    }
+	    
+	    boolean ISBST(BSTNode root,int min,int max){
+	        if(root==null){
+	            return true;
+	        }
+	        if(root.key<min || root.key >max){
+	            return false;    
+	        }
+	        
+	        return ISBST(root.left,min,root.key-1) && ISBST(root.right,root.key+1,max) ;
+	        
+	        
+	        
+	    }
+	
 }
 
 
@@ -263,7 +303,7 @@ public class BinarySearchTreeDemo {
 						
 			}
 		
-					
+		
 			System.out.println("Max Element is "+bsetTree.findMax(bsetTree).key);
 			System.out.println("Min Element is "+bsetTree.minNodes(bsetTree).key);
 			System.out.println("Count Lead Nodes :"+ 	bsetTree.countLeafNodes(bsetTree));

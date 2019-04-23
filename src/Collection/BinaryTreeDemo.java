@@ -1,5 +1,7 @@
 package Collection;
 
+import java.util.LinkedList;
+
 class BTNode {
 	int key;
 	BTNode left, right;
@@ -51,6 +53,37 @@ class BTNode {
 		}
 		
 	}
+	
+	
+	// root index is 0 , so this function is different than above example
+	public int height(BTNode root) {
+      	int l=0;
+        int r=0;
+        if(root==null){
+            return 0;
+        }else{
+            if(root.left==null && root.right==null){
+                return 0;
+            }
+
+            if(root.left!=null){
+                l+=height(root.left);
+            }
+
+            if(root.right!=null){
+                r+=height(root.right);
+            }
+
+            if(l<r){
+                return r+1;
+            }else{
+                return l+1;
+            }
+
+        }
+
+    }
+	
 	
 	
 	public int countLeafNodes(BTNode root) {
@@ -126,6 +159,24 @@ class BTNode {
 		}
 	}
 	
+	
+	// Print key each level
+	public static void levelOrder(BTNode root) {
+        LinkedList<BTNode> queue=new LinkedList<BTNode>();
+        if(root==null){
+            return ;
+        }
+        queue.add(root);
+        while(queue.size()!=0){
+           	BTNode temp=queue.poll();
+             System.out.print(temp.key+" ");
+             if(temp.left!=null)
+                 queue.add(temp.left);
+             if(temp.right!=null)
+                queue.add(temp.right);
+        }
+    }
+  
 	
 	
 	public int count1ChildNodes(BTNode root) {
