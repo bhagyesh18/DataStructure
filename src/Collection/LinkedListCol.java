@@ -14,6 +14,8 @@ public class LinkedListCol {
 		ll.add("Kumat");
 		ll.add("Shah");
 		
+	
+		
 		System.out.println(ll);
 		
 		ll.addFirst("Helll");
