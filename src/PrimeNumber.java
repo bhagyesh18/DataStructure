@@ -25,11 +25,19 @@ public class PrimeNumber {
         }
         return primes;
     }
-
+ 
 	
+		
+	
+    	
 	public static void main(String[] args) {
-		int[] result=getprime(10);
+		int[] result=getprime(24);
 		for(int a : result) {
+			System.out.print(a+" ");
+		}
+		
+		int[] result2=getprime(36);
+		for(int a : result2) {
 			System.out.print(a+" ");
 		}
 	}

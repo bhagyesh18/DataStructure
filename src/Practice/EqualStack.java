@@ -1,5 +1,8 @@
 package Practice;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Stack;
 
 //https://www.hackerrank.com/challenges/equal-stacks/problem
@@ -47,6 +50,32 @@ public class EqualStack {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		 List<Integer> list=new ArrayList<Integer>();
+		 int[] arr = {13, 7, 6, 45, 21, 9, 101, 102}; 
+
+		 
+		 String s="12:45:54PM";
+		 String[] token=s.split(":");
+         int hours=Integer.parseInt(token[0]);
+         String newHours="";
+         if(token[2].substring(2,4).equals("PM")){
+                   if(hours==12) {
+                	   newHours=""+hours+":"+token[1]+":"+token[2].substring(0,2);   
+                   }else {
+                	   hours=hours+12;
+                       newHours=""+hours+":"+token[1]+":"+token[2].substring(0,2);
+                   }
+        	 	  
+         }else {
+               if(hours==12){
+                  newHours="00:"+token[1]+":"+token[2].substring(0,2);
+                }else{
+                  newHours=token[0]+":"+token[1]+":"+token[2].substring(0,2);
+                }
+         }
+		 
+         System.out.print(""+newHours);
+         
 	}
 
 }
