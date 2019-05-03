@@ -27,10 +27,36 @@ public class PrimeNumber {
     }
  
 	
-		
+	static boolean isPrime(int n) {
+		if(n==1) {
+			return true;
+		}
+		for(int i=2;i<=n/2;i++) {
+			if(n%i==0) {
+				return false;
+			}
+		}
+		return true;
+	}
 	
+	// fast
+	static boolean isPrimefast(int n) {
+		if(n==1) {
+			return true;
+		}
+		for(int i=2;i*i<=n;i++) {
+			if(n%i==0) {
+				return false;
+			}
+		}
+		return true;
+	}
     	
 	public static void main(String[] args) {
+		System.out.println("Is prime "+isPrime(5));
+		System.out.println("Is prime "+isPrime(10));
+		
+		
 		int[] result=getprime(24);
 		for(int a : result) {
 			System.out.print(a+" ");

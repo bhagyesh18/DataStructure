@@ -1,6 +1,3 @@
-
-
-
 abstract class Employee {
    private String name;
    private String address;
@@ -61,6 +58,10 @@ class Salary extends Employee {
 	      return salary;
 	   }
 	   
+	   public void test() {
+		   System.out.print("HHHH");
+	   }
+	   
 	   public void setSalary(double newSalary) {
 	      if(newSalary >= 0.0) {
 	         salary = newSalary;
@@ -82,6 +83,7 @@ public class AbractDemo {
 	      s.mailCheck();
 	      System.out.println("\n Call mailCheck using Employee reference--");
 	      e.mailCheck();
+	      e.getNumber();
 	      System.out.println("\n "+e.computePay());
 		     
 	   }

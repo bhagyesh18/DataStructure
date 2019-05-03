@@ -35,6 +35,10 @@ public class CountCharinString {
 		Set<Character> setcha=hashmap.keySet();
 		java.util.Iterator<Character> it=setcha.iterator();
 		
+		while(it.hasNext()) {
+			System.out.println(""+it.next());
+		}
+		
 		for(Character c:setcha) {
 			System.out.println("Character:"+c+" Number of Times"+hashmap.get(c));
 		}

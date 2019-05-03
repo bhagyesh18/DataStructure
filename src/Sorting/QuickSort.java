@@ -44,7 +44,7 @@ public class QuickSort {
 	
 	public static void main(String[] args) {
 
-		int[] a= {2,3,5,2,8,34,5,1,7};
+		int[] a= {3,432,6743,2,67,2,8,93,5};
 		a=QuickSort(a, 0, a.length-1);
 		for(int n:a) {
 			System.out.println(n);

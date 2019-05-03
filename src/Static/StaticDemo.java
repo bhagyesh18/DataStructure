@@ -32,7 +32,9 @@ class Student
 	
 	// static method 
 	static void setCllg(String name){ 
-		cllgName = name ; 
+		cllgName = name ;
+	  int r=0;
+	  
 	} 
 	
 	// instance method 
