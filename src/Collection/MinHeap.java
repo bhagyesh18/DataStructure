@@ -3,7 +3,7 @@ package Collection;
 /*
  https://www.geeksforgeeks.org/min-heap-in-java/
 
-It shoud be complete Binary Tree. 
+It should be complete Binary Tree. 
 
 1) It’s a complete tree (All levels are completely filled except possibly the last level 
 and the last level has all keys as left as possible). This property of Binary Heap makes 
