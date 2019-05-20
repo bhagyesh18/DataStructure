@@ -10,6 +10,8 @@ public class IceCreamParlor {
 	// Complete the icecreamParlor function below.
 	static int[] icecreamParlor(int m, int[] arr) {
 		int[] index = new int[2];
+		
+		
 		Map<Integer, Integer> map = new HashMap<>();
 		for (int i = 0; i < arr.length; i++) {
 			if (map.containsKey(m - arr[i])) {

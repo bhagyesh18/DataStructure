@@ -32,8 +32,6 @@ public class GenomicRangeQuery {
 
 	public static int[] solutionFAST(String S, int[] P, int[] Q) {
 
-		// used jagged array to hold the prefix sums of each A, C and G genoms
-		// we don't need to get prefix sums of T, you will see why.
 		int[][] genoms = new int[3][S.length() + 1];
 		// if the char is found in the index i, then we set it to be 1 else they are 0
 		// 3 short values are needed for this reason

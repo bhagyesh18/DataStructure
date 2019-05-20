@@ -83,9 +83,7 @@ class BTNode {
         }
 
     }
-	
-	
-	
+		
 	public int countLeafNodes(BTNode root) {
 		int count=0;
 		if(root==null) {

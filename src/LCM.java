@@ -12,8 +12,7 @@ public class LCM {
 	static int findLCM(int a,int b) {
 		return (a*b)/findGCD(a, b);
 	}
-	
-	
+		
 	//The approach is to start with the largest of the 2 numbers 
 	//and keep incrementing the larger number by itself till smaller number perfectly divides the resultant
 	static int findLCMBylargest(int a, int b) 

@@ -1,5 +1,7 @@
 package Collection;
 
+import java.util.Stack;
+
 //Java Code for Linked List Implementation 
 
 public class StackAsLinkedList { 
@@ -67,6 +69,10 @@ public class StackAsLinkedList {
 	
 		System.out.println("Top element is " + sll.peek()); 
 
+		Stack<Integer> stck;
+	
+		
+		
 
 	} 
 

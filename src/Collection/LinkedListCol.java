@@ -42,7 +42,6 @@ public class LinkedListCol {
 		
 		ll.clear();
 		
-
         LinkedList<Integer> linkedList2 = new LinkedList<Integer>();
      
         //Cloning the linkedList1 into linkedList2

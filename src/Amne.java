@@ -8,9 +8,10 @@ public class Amne {
 	public static int incrementing=0;
 	
 	private static final String FILENAME = "temp.txt";
+	
 	public static ArrayList<Integer> price=new ArrayList<Integer>();
+	
 	public static void main(String[] args) {
-
 		BufferedReader br = null;
 		FileReader fr = null;
 		int N = 0;

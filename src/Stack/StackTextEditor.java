@@ -1,4 +1,4 @@
-package Practice;
+package Stack;
 
 import java.util.*;
 

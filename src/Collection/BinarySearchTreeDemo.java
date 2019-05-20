@@ -120,7 +120,7 @@ class BSTNode{
 	
 	
 	// Print key each level
-		public static void levelOrder(BSTNode root) {
+	public static void levelOrder(BSTNode root) {
 	        LinkedList<BSTNode> queue=new LinkedList<BSTNode>();
 	        if(root==null){
 	            return ;
@@ -134,7 +134,7 @@ class BSTNode{
 	             if(temp.right!=null)
 	                queue.add(temp.right);
 	        }
-	    }
+	}
 	  
 	
 	public int numberOfNodes(BSTNode root) {
@@ -264,7 +264,6 @@ class BSTNode{
 	 boolean checkBST(BSTNode root) {
 	       return ISBST(root,Integer.MIN_VALUE,10000);
 	    }
-	    
 	    boolean ISBST(BSTNode root,int min,int max){
 	        if(root==null){
 	            return true;
@@ -274,9 +273,6 @@ class BSTNode{
 	        }
 	        
 	        return ISBST(root.left,min,root.key-1) && ISBST(root.right,root.key+1,max) ;
-	        
-	        
-	        
 	    }
 	
 }

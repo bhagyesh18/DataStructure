@@ -8,7 +8,6 @@ public class Factorial {
 	
 		Factorial f=new Factorial();
 		Scanner input=new Scanner(System.in);
-		//int[] no;
 		int size;
 		size=input.nextInt();
 		int[] no=new int[size];
@@ -18,7 +17,7 @@ public class Factorial {
 		}
 	
 		
-//foreach loop with list extract the individual item.
+		//foreach loop with list extract the individual item.
 		for(int val : no){
 			System.out.println("j="+val+" Result is : "+factorial(val));
 			System.out.println("j="+val+" Result is : "+f.fac(val));

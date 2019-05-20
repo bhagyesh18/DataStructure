@@ -53,34 +53,7 @@ class BFS
 		} 
 	} 
 
-	public void BFSown(int start) {
-		LinkedList<Integer> queue=new LinkedList<Integer>();
-		boolean visitor[]=new boolean[V];
-		
-		queue.add(start);
-		visitor[start]=true;
-		while(queue.size()!=0) {
-			start=queue.poll();
-			System.out.println(start);
-			
-			Iterator<Integer> i=adj[start].listIterator();
-			while(i.hasNext()) {
-				int temp=i.next();
-				if(!visitor[temp]) {
-					queue.add(temp);
-					visitor[temp]=true;
-				}
-			}
-			
-			
-			
-		}
-		
-		
-		
-		
-	}
-	
+
 	// Driver method to 
 	public static void main(String args[]) 
 	{ 
@@ -96,8 +69,6 @@ class BFS
 		System.out.println("Following is Breadth First Traversal "+ 
 						"(starting from vertex 2)"); 
 
-		g.BFSown(2); 
-		
 	
 		
 		   
