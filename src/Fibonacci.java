@@ -52,7 +52,7 @@ public class Fibonacci {
  
 	public static void main(String[] args) throws IOException {
 		int n;
-		BigInteger answer;
+		int answer;
 		System.out.println("Enter Number : ");
 		String input = stdin.readLine();
 		n = Integer.parseInt(input);
@@ -63,7 +63,7 @@ public class Fibonacci {
 		tempArray[1] = new BigInteger("1");
 		for (int i = 2; i < n; i++)
 			tempArray[i] = new BigInteger("0");
-		answer = fib(n);
+		answer = fibonacciLoop(n);
 
 		System.out.println("Result: " + answer);
 

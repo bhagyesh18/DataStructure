@@ -1,3 +1,4 @@
+package GCDLCM;
 
 //https://www.geeksforgeeks.org/c-program-find-gcd-hcf-two-numbers/
 
@@ -34,7 +35,7 @@ public class GCD {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(""+ findGCD(15, 15));
+		System.out.println(""+ findGCD(10, 2));
 		System.out.println(""+ findGCDEuclidean(0, 19));
 	}
 

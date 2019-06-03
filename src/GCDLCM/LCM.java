@@ -1,3 +1,4 @@
+package GCDLCM;
 import java.util.ArrayList;
 
 import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
@@ -59,9 +60,6 @@ public class LCM {
 					res=res*arr2.get(i);
 				}
 			}
-			for(int j=arr2.size();j<arr1.size();j++) {
-				res=res*arr1.get(j);
-			}
 		}else {
 			for(int i=0;i<arr1.size();i++) {
 				if(arr1.get(i)==arr2.get(i)) {
@@ -71,9 +69,7 @@ public class LCM {
 					res=res*arr1.get(i);
 				}
 			}
-			for(int j=arr1.size();j<arr2.size();j++) {
-				res=res*arr2.get(j);
-			}
+			
 		}
 		
 		
@@ -83,8 +79,8 @@ public class LCM {
 	 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(findLCM(75, 15));
-		System.out.println(findLCMPrimefactors(75, 15));
+		System.out.println(findLCM(4, 10));
+		System.out.println(findLCMPrimefactors(4, 10));
 	}
 
 }
