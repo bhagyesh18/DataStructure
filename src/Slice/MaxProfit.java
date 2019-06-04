@@ -7,7 +7,7 @@ package Slice;
 // [10,12,3,2,6]   
 // get max profit from days in stock
 // A and B days in array 0<=A<=B<N  Arr[B]-Arr[A]=profit find max profit
-// in above case 10-12=2 3-6=3   max profit is 3
+// in above case 10-12=2 3-6=3  2-6=4 max profit is 4
 // efficient algorithm
 
 public class MaxProfit {
@@ -34,6 +34,10 @@ public class MaxProfit {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		
+		int[] A= {10,12,3,2,6};
+		System.out.println(solution(A));
 		double ab=-2;
 		double cd=-2;
 			System.out.println(""+ab/cd);

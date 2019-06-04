@@ -12,20 +12,17 @@ public class MaxSliceSum {
 	            }else{
 	                maxEnd=0;   
 	            }
-	            if(maxEnd<maxSlice){
-	                maxSlice=maxSlice;
-	            }else{
+	            if(maxEnd>maxSlice){
 	                maxSlice=maxEnd;   
 	            }
 	        }
-	      
 	      return maxSlice;
-	        
-	    }
+	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		int[] A={10,12,-30,45,2,61};
+		System.out.println(solution(A));
 	}
 
 }

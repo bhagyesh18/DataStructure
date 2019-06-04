@@ -72,7 +72,7 @@ class Salary extends Employee {
 	      System.out.println("Computing salary pay for " + getName());
 	      return salary/52;
 	   }
-	}
+	} 
 
 
 public class AbractDemo {

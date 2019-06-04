@@ -5,7 +5,7 @@ package GCDLCM;
 // Important
 
 public class ChocolatesByNumbers {
-	  public static int gcd(int N,int M) {
+	 public static int gcd(int N,int M) {
 		  if(M==0) {
 			  return N;
 		  }

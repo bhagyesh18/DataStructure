@@ -4,7 +4,6 @@ public class QuickSort {
 	public static int[] QuickSort(int[] a,int first,int last) {
 		int pivot,i,j,temp;
 		if(first<last) {
-			
 			// Pivot is fist element
 			pivot=first;
 			i=first;
