@@ -20,11 +20,14 @@ public class MapProblems {
 	       // Defined Custom Comparator here
 	       Collections.sort(list, new Comparator() {
 	            public int compare(Object o1, Object o2) {
+	            	System.out.println(((Map.Entry) (o1)) +"  "+((Map.Entry) (o2)));
 	               return ((Comparable) ((Map.Entry) (o1)).getValue())
 	                  .compareTo(((Map.Entry) (o2)).getValue());
 	            }
 	       });
 
+	    
+	       
 	       // Here I am copying the sorted list in HashMap
 	       // using LinkedHashMap to preserve the insertion order
 	       HashMap sortedHashMap = new LinkedHashMap();
@@ -75,6 +78,9 @@ public class MapProblems {
 		unsortedValuemap.put(1000,234);
 		unsortedValuemap.put(25,2);
 		unsortedValuemap.put(89,2);		
+		
+		
+		
 		unsortedValuemap=sortByValues(unsortedValuemap);
 		System.out.println("Sorted By Value "+unsortedValuemap);
 		

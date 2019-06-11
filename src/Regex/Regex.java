@@ -55,7 +55,7 @@ public class Regex {
 		System.out.println(Pattern.matches("h*", "h"));  // True
 		System.out.println(Pattern.matches("h*", "hhh"));  // true
 		System.out.println(Pattern.matches("h*", ""));  // true
-		System.out.println(Pattern.matches("h*", "sadasd"));  // true
+		System.out.println(">>>>>>"+Pattern.matches("h*", "sadasd"));  // false
 		
 		System.out.println(Pattern.matches("h+", "h"));  // True
 		System.out.println(Pattern.matches("h+", "hhh"));  // true

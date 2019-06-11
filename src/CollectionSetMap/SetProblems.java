@@ -28,6 +28,7 @@ public class SetProblems {
 		unsortedSet.add(29);
 		System.out.println("Unsorted "+unsortedSet);
 		
+		
 		//  Sorting current Set
 		unsortedSet=new TreeSet<Integer>(unsortedSet);
 		System.out.println("Sorted By TreeSet "+unsortedSet);
@@ -41,6 +42,8 @@ public class SetProblems {
 		treesortedSet.add(-3);
 		treesortedSet.add(29);
 		System.out.println("Sorted TreeSet object of trerSet "+treesortedSet);
+		
+		
 		
 		//Create Set object using TreeSet No Difference
 		Set<Integer> setTreesortedSet=new TreeSet<Integer>();

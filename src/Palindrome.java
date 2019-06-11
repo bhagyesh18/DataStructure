@@ -35,7 +35,7 @@ public class Palindrome {
 	
 	
 	public static void main(String[] args) {
-		int no=7125;
+		int no=-7125;
 		int copy=no;
 		while(!checkPalindrome(copy)) {
 			copy=copy+reverseNumber(copy);

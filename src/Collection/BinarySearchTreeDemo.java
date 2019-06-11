@@ -5,6 +5,7 @@ import java.util.LinkedList;
 
 import javax.print.attribute.standard.Finishings;
 
+
 class BSTNode{
 	int key;
 	BSTNode left,right;
@@ -275,6 +276,28 @@ class BSTNode{
 	        return ISBST(root.left,min,root.key-1) && ISBST(root.right,root.key+1,max) ;
 	    }
 	
+	    
+	    static int  min = Integer.MAX_VALUE;
+		  static long  prev = Long.MAX_VALUE;
+		  public static int minDiffInBST(BSTNode root) {
+		         if(root==null) return min;
+		          minDiffInBSTRec(root);
+		          return min;
+		  }
+		      
+		      
+		  public  static  void minDiffInBSTRec(BSTNode root)
+		  {
+		      if(root!=null){
+		          minDiffInBSTRec(root.left);
+		          if(min>Math.abs(prev-root.key)){
+		              min = (int) Math.abs(prev-root.key);
+		          }
+		          prev = root.key;
+		          minDiffInBSTRec(root.right);
+		      }
+		  }
+	    
 }
 
 

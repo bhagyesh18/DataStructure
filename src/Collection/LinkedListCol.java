@@ -3,6 +3,8 @@ package Collection;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+import sun.java2d.Disposer.PollDisposable;
+
 // https://javaconceptoftheday.com/java-linkedlist-programming-examples/
 
 public class LinkedListCol {
@@ -14,7 +16,7 @@ public class LinkedListCol {
 		ll.add("Kumat");
 		ll.add("Shah");
 		
-	
+
 		
 		System.out.println(ll);
 		
