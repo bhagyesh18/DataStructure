@@ -6,7 +6,7 @@ public class Anagram {
 	public static void main(String[] args) {
 		
 		String str1="Bhagyesh Patel";
-		String str2="Bhagyesh Paael";
+		String str2="Patel hBagyesh";
 		
 		char[] str1charArray=str1.toCharArray();
 		char[] str2charArray=str2.toCharArray();

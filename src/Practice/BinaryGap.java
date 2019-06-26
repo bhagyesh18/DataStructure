@@ -41,6 +41,7 @@ public class BinaryGap {
 	            binary=String.valueOf(Number%2)+binary;
 	            Number=Number/2;
 	        }
+	        System.out.println("Binary"+binary);
 	        String[] tokens=binary.split("1");
 			if(!binary.startsWith("1")) {
 				tokens[0]="";
@@ -55,6 +56,8 @@ public class BinaryGap {
 					finalArray.add(string);
 				}
 			}
+			
+			
 			for (String string : finalArray) {
 				if(string.length()>max) {
 					max=string.length();
@@ -65,7 +68,20 @@ public class BinaryGap {
 	    }
 	
 	public static void main(String[] args) {
-		System.out.println(solution(206));
+		System.out.println(solution(200));
+		
+		String bit="010000001110";
+		String[] arr=bit.split("1");
+		if(!bit.startsWith("1")) {
+			arr[0]="";
+		}
+		if(!bit.endsWith("1")) {
+			arr[arr.length-1]="";
+		}
+		for(String a:arr) {
+			System.out.println(">"+a+"<");
+		}
+		
 	}
 
 }

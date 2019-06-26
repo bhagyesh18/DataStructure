@@ -48,7 +48,7 @@ class TopViewTree {
 	    // Queue to do BFS 
 	    Queue<Pair > q =  new LinkedList<Pair>(); 
 	  
-	    // map to store node at each vartical distance 
+	    // map to store node at each vertical distance 
 	    Map<Integer, Integer> mp = new HashMap<Integer, Integer>(); 
 	  
 	    q.add(new Pair( root, 0 )); 

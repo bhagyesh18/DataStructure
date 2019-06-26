@@ -2,12 +2,14 @@ package CollectionSetMap;
 
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
 
 // https://howtodoinjava.com/java-sorting-guide/
@@ -83,6 +85,68 @@ public class MapProblems {
 		
 		unsortedValuemap=sortByValues(unsortedValuemap);
 		System.out.println("Sorted By Value "+unsortedValuemap);
+		
+		
+		// other way to sort by value using linkedhashmap with lambda functioin
+		//LinkedHashMap preserve the ordering of elements in which they are inserted
+		HashMap<Integer, String> unSortedMap = new HashMap<>();
+		unSortedMap.put(50, "Alex");
+		unSortedMap.put(20, "Charles");
+		unSortedMap.put(60, "Brian");
+		unSortedMap.put(70, "Edwin");
+		unSortedMap.put(120, "George");
+		unSortedMap.put(10, "David");
+
+		//LinkedHashMap preserve the ordering of elements in which they are inserted
+		LinkedHashMap<Integer, String> sortedMap = new LinkedHashMap<>();
+		 
+		unSortedMap.entrySet()
+		    .stream()
+		    .sorted(Map.Entry.comparingByValue())
+		    .forEachOrdered(x -> sortedMap.put(x.getKey(), x.getValue()));
+		
+		
+		Set<Integer> listkey=sortedMap.keySet();
+		for (Integer integer : listkey) {
+			System.out.println(integer);
+		}
+		
+		// Temp
+		HashMap<Integer, Integer> unSortedMapInt = new HashMap<>();
+		unSortedMapInt.put(50, 324);
+		unSortedMapInt.put(20, 214);
+		unSortedMapInt.put(60, 363263);
+		unSortedMapInt.put(70, 12215);
+		unSortedMapInt.put(120, 26);
+		unSortedMapInt.put(10, 2);
+		
+		System.out.println(unSortedMapInt);
+		LinkedHashMap<Integer, Integer> sortedMapInt = new LinkedHashMap<>();
+		unSortedMapInt.entrySet()
+		    .stream()
+		    .sorted(Map.Entry.comparingByValue())
+		    .forEachOrdered(x -> sortedMapInt.put(x.getKey(), x.getValue()));
+		System.out.println(sortedMapInt);
+		
+		Set<Integer> listkey2=sortedMapInt.keySet();
+		for (Integer integer : listkey2) {
+			System.out.println(integer);
+		}
+		
+		Iterator<Integer> itt= unSortedMapInt.keySet().iterator();
+		while(itt.hasNext()) {
+			System.out.println(itt.next());
+		}
+		
+		Set<Map.Entry<Integer, Integer>> setEntry= unSortedMapInt.entrySet();
+		System.out.println(setEntry);
+		for(Map.Entry<Integer, Integer> me: setEntry) {
+			System.out.println(me.getKey() +"<>"+me.getValue());
+		}
+
+		
+		System.out.println(unSortedMapInt.values());
+		System.out.println(Collections.max(unSortedMapInt.values()));
 		
 	}
 

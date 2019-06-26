@@ -44,6 +44,9 @@ public class RunnableDemo {
 	      
 	      RunnablethreadDemo R2 = new RunnablethreadDemo( "Thread-2");
 	      R2.start();
+	      
+	      
+	    
 	}
 
 }

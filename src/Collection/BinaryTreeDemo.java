@@ -19,6 +19,33 @@ class BTNode {
 		}
 	}
 
+	
+	public boolean search(BTNode root,int key) {
+		if(root==null) {
+			return false;
+		}else {
+			LinkedList<BTNode> queue=new LinkedList<BTNode>();
+			queue.add(root);
+			
+			while(queue.size()!=0) {
+				
+				BTNode latest=queue.poll();
+				if(latest.key==key) {
+					return true;
+				}
+				if(latest.left!=null) {
+				  queue.add(latest.left);
+				}
+				if(latest.right!=null) {
+					queue.add(latest.right);
+				}
+			}
+			
+		}
+		return false;
+		
+	}
+	
 	// It is not ordered tree as it is not Binary Search Tree
 	public int findMax(BTNode root) {
 		if (root == null) {
@@ -259,6 +286,7 @@ public class BinaryTreeDemo {
 		bt.PrintTree(bt);
 		System.out.println();
 	
+		System.out.println("Search "+bt.search(bt,7));
 				
 		System.out.println("Max Element is "+bt.findMax(bt));
 		System.out.println("Count Lead Nodes :"+ 	bt.countLeafNodes(bt));

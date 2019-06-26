@@ -19,6 +19,7 @@ public class ThreadClassDemo {
 		      } catch (InterruptedException e) {
 		         System.out.println("Thread interrupted.");
 		      }
+		  
 		      System.out.println("Starting thread4...");
 		      Thread thread4 = new GuessANumber(75);
 		      

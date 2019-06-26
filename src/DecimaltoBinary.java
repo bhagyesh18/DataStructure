@@ -9,7 +9,6 @@ public class DecimaltoBinary {
 				int rem;
 				while(copy>0) {
 					rem=copy%2;
-					
 					binary=rem+binary;
 					copy=copy/2;
 				}

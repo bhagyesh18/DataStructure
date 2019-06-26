@@ -90,7 +90,11 @@ public class HashMapSorting {
 		setReverse.add(100);
 		setReverse.add(99);
 		setReverse.add(99);
+		List<Integer> ll2l=new ArrayList<Integer>(setReverse);
+		Collections.sort(ll2l);
+		System.out.println(ll2l);
 		List<Integer> listhet=setReverse.stream().sorted().collect(Collectors.toList());
+	     setReverse.stream().sorted().forEach(p->System.out.println(p));
 		for (Integer integer : listhet) {
 			System.out.println(">>"+integer);
 		}

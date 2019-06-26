@@ -1,4 +1,4 @@
-package Graph;
+package Tree;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -6,12 +6,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.Stack;
 
-class TreeNode {
-     int val;
-     TreeNode left;
-     TreeNode right;
-     TreeNode(int x) { val = x; }
-}
  
  // PreOrder Traverse using iterative method
 // Use DFS method for this > Check root then left then right node.

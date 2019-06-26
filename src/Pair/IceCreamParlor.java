@@ -1,4 +1,4 @@
-package Practice;
+package Pair;
 
 import java.io.*;
 import java.util.*;

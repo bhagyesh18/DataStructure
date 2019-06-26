@@ -3,6 +3,7 @@ package CollectionSetMap;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -27,6 +28,7 @@ public class SetProblems {
 		unsortedSet.add(-3);
 		unsortedSet.add(29);
 		System.out.println("Unsorted "+unsortedSet);
+		
 		
 		
 		//  Sorting current Set
@@ -63,6 +65,19 @@ public class SetProblems {
 		Collections.reverse(setReverseOrder);
 		setTreesortedSet=new LinkedHashSet(setReverseOrder);
 		System.out.println("Reverse Order Set "+setTreesortedSet );
+		
+		
+		
+		
+		Iterator<Integer> iterator= setReverseOrder.iterator();
+		while(iterator.hasNext()) {
+			System.out.println(">>"+iterator.next());
+		}
+		Iterator<Integer> listiterator= setReverseOrder.listIterator();
+		while(listiterator.hasNext()) {
+			System.out.println("--"+listiterator.next());
+		}
+		
 		
 		
 	}

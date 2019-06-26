@@ -3,7 +3,7 @@ package Slice;
 // codilit maxProfit
 
 // Important
-
+//min=10
 // [10,12,3,2,6]   
 // get max profit from days in stock
 // A and B days in array 0<=A<=B<N  Arr[B]-Arr[A]=profit find max profit

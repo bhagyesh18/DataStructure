@@ -1,3 +1,4 @@
+package Permutation;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -60,7 +61,7 @@ public class LetterCasePermutation {
 	}
 	
 	public static void main(String[] args) {
-		List<String> list=solution("n");
+		List<String> list=solution("Ab6c");
 		//Collections.sort(list);
 		for (String string : list) {
 			System.out.println(string);

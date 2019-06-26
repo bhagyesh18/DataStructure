@@ -1,4 +1,4 @@
-package Practice;
+package Pair;
 
 
 //https://www.hackerrank.com/challenges/pairs/problem

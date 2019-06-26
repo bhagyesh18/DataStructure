@@ -1,8 +1,12 @@
 package CollectionSetMap;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
+
 
 public class ListProblems {
 
@@ -42,6 +46,19 @@ public class ListProblems {
 		System.out.print("]"); 
 		
 		
+		// List to Array 
+		Integer[] toArray=unsortedStreamList.toArray(new Integer[0]);
+		System.out.println();
+			System.out.println(Arrays.toString(toArray));
+		LinkedList<Integer> linkedlist=new LinkedList<Integer>();
+	
+		linkedlist.add(1);
+		List<Integer> list2linkedlist=linkedlist;
+		System.out.println(list2linkedlist);
+		
+		List<Integer> stcklist=new Stack<Integer>();
+		stcklist.add(null);
+		System.out.println(stcklist);
 		
 	}
 

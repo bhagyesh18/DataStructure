@@ -1,5 +1,9 @@
 package Tree;
 
+import java.util.LinkedList;
+
+import sun.font.StrikeCache;
+
 class TreeNode {
      int val;
      TreeNode left;
@@ -30,6 +34,43 @@ public class MinimumDistanceBetweenBSTNodes {
 	      }
 	  }
 		
+	  
+	  public static void bfs(TreeNode root) {
+		  if(root==null) {
+			  return;
+		  }
+		  LinkedList<TreeNode> queue=new LinkedList<TreeNode>();
+		  queue.add(root);
+		  
+		  while(!queue.isEmpty()) {
+			  TreeNode temp=queue.poll();
+			  System.out.print(" "+temp.val);
+			  
+			  if(temp.left!=null) {
+				  queue.add(temp.left);
+			  }
+			  if(temp.right!=null) {
+				  queue.add(temp.right);
+			  }
+		  }
+	  }
+	  
+	  
+	  public static void dfs(TreeNode root) {
+		  if(root==null) {
+			  return;
+		  }
+		  
+		  System.out.print(" "+root.val);
+			  if(root.left!=null) {
+				 dfs(root.left);
+			  }
+			  if(root.right!=null) {
+					 dfs(root.right);
+			  }
+		  
+	  }
+	  
 	public static void main(String[] args) {
 		
 		
@@ -49,6 +90,15 @@ public class MinimumDistanceBetweenBSTNodes {
 		System.out.println();
 		//preorderTraversal(root);
 		
+		StringBuffer sb=new StringBuffer("fasdfsafsfsdasdg");
+		sb.insert(2, '-');
+		System.out.println(sb);
+		String name="---";
+		name=name.replaceAll("-","");
+		System.out.println(name.length());
+		
+		bfs(root);
+		dfs(root);
 	}
 
 }
