@@ -1,3 +1,4 @@
+package Bits;
 
 public class DecimaltoBinary {
 
@@ -13,6 +14,10 @@ public class DecimaltoBinary {
 					copy=copy/2;
 				}
 				System.out.print(binary);	
+				
 	}
 
+	
+	
+	
 }

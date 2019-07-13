@@ -262,6 +262,33 @@ class BTNode {
 	}
 	
 	
+	  public BTNode invertTree(BTNode root) {
+          
+	         if(root==null)
+	             return root;
+	            
+	         invertTreeRed(root);
+	        
+	         return root;
+	        
+	    }
+	    
+	    
+	     public void invertTreeRed(BTNode root) {
+	            
+	         if(root==null)
+	             return;
+	        
+	         BTNode left=root.left;
+	         BTNode right=root.right;
+	         root.left=right;
+	         root.right=left;
+	        
+	         invertTree(root.left);
+	         invertTree(root.right);
+	    }
+	
+	
 }
 
 public class BinaryTreeDemo {

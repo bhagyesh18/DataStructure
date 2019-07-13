@@ -76,7 +76,7 @@ class PrintDemo {
 	   }
 	   
 	   public void run() {
-	      synchronized(PD) {
+		   synchronized(PD) {
 	         PD.printCount();
 	      }
 	      System.out.println("Thread " +  threadName + " exiting.");
@@ -104,8 +104,8 @@ class PrintDemo {
 
 	      // wait for threads to end
 	         try {
-	         T1.join();
-	         T2.join();
+	      //   T1.join();
+	       //  T2.join();
 	      } catch ( Exception e) {
 	         System.out.println("Interrupted");
 	      }

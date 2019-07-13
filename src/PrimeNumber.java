@@ -1,3 +1,5 @@
+import java.util.HashSet;
+import java.util.Set;
 
 public class PrimeNumber {
 
@@ -52,6 +54,24 @@ public class PrimeNumber {
 		return true;
 	}
     	
+	  public static Set<Integer> primenumber(){
+	        Set<Integer> set=new HashSet<Integer>();
+	        for(int i=2;i<33;i++){
+	            int flag=0;
+	            for(int j=2;j<=i/2;j++){
+	                if(i%j==0){
+	                    flag=1;
+	                    break;
+	                }
+	            }
+	            if(flag==0){
+	                set.add(i);
+	            }
+	        }
+	        
+	        return set;
+	    }
+	
 	public static void main(String[] args) {
 		System.out.println("Is prime "+isPrime(5));
 		System.out.println("Is prime "+isPrime(10));
@@ -66,6 +86,12 @@ public class PrimeNumber {
 		for(int a : result2) {
 			System.out.print(a+" ");
 		}
+		
+		Set<Integer> primenumber=primenumber();
+		for (Integer integer : primenumber) {
+			System.out.println(integer);
+		}
+		
 	}
 
 }

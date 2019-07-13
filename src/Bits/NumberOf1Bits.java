@@ -20,6 +20,9 @@ public class NumberOf1Bits {
 	    return bits;
 	}
 	
+	private int inbuildmethod(int n) {
+		return Integer.bitCount(n);
+	}
 	
 	public static int hammingWeightprint(int n) {
 	    int bits = 0;

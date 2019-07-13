@@ -15,6 +15,28 @@ interface B extends A{
 	void d();
 }
 
+interface X{
+	void y();
+	void z();
+	
+	interface xyz{
+		void xy();
+	}
+}
+
+class nested implements X{
+	@Override
+	public void y() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void z() {
+		// TODO Auto-generated method stub
+		
+	}
+}
+
 abstract class AbstractA implements A{
 	abstract void c();
 	@Override
@@ -24,7 +46,7 @@ abstract class AbstractA implements A{
 	}
 }
 
-class BInterface implements B{
+class BInterface implements B {
 
 	@Override
 	public void a() {

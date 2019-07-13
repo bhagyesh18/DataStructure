@@ -65,7 +65,6 @@ public class HashTable {
 	
 		System.out.println(hashTable.isEmpty());
 		
-		
 		Enumeration<Integer> keysetenum=hashTable.keys();
 	
 		while(keysetenum.hasMoreElements()) {

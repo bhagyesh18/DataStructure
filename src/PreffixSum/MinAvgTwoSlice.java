@@ -25,16 +25,6 @@ public class MinAvgTwoSlice {
 			min=(A[A.length-1]+A[A.length-2])/2;
 			minPos=A.length-2;
 		}
-		
-	
-		
-
-		
-		
-		
-		
-		
-		
 		return minPos;
 	}
 	

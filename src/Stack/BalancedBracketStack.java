@@ -9,6 +9,7 @@ public class BalancedBracketStack {
 			return "NO";
 		}else {
 			Stack<Character> stack=new Stack<Character>();
+			
 			char[] charArray=string.toCharArray();
  			for(char c: charArray) {
 				
@@ -44,7 +45,6 @@ public class BalancedBracketStack {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 			System.out.println(isBalanced("{(([])[])[]}"));
-			
 	}
 
 }

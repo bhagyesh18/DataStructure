@@ -23,6 +23,10 @@ class RunnablethreadDemo implements Runnable {
 	      }
 	      System.out.println("Thread " +  threadName + " exiting.");
 	   }
+
+	   public void xyaz() {
+		   
+	   }
 	   
 	   public void start () {
 	      System.out.println("Starting " +  threadName );
@@ -33,6 +37,15 @@ class RunnablethreadDemo implements Runnable {
 	   }
 }
 
+class RunnableDemo2 implements Runnable{
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+}
 
 
 public class RunnableDemo {
@@ -45,6 +58,8 @@ public class RunnableDemo {
 	      RunnablethreadDemo R2 = new RunnablethreadDemo( "Thread-2");
 	      R2.start();
 	      
+	      
+	      Runnable r1=()->System.out.println("hello");
 	      
 	    
 	}

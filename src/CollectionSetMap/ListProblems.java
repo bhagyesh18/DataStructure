@@ -2,6 +2,7 @@ package CollectionSetMap;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -18,7 +19,10 @@ public class ListProblems {
 		unsortedList.add(23);
 		unsortedList.add(12);
 		unsortedList.add(23);
+		
 		System.out.println("Unsorted List "+unsortedList);
+	
+		
 		
 		// sort list using Collections API
 		Collections.sort(unsortedList);
@@ -36,6 +40,8 @@ public class ListProblems {
 		unsortedStreamList.add(23);
 		unsortedStreamList.add(12);
 		unsortedStreamList.add(23);
+	
+		
 		System.out.print("Sorting List using Stream Lambda [");
 		unsortedStreamList.stream().sorted().forEach(p-> System.out.print(p+","));
 		System.out.print("]"); 
@@ -44,6 +50,16 @@ public class ListProblems {
 		System.out.print("\nTraverse in list using stream Lambda[");
 		unsortedStreamList.stream().forEach(p-> System.out.print(p+","));
 		System.out.print("]"); 
+		
+		Iterable<Integer> llIterable=unsortedStreamList;
+		
+		
+		llIterable.forEach(p-> {
+			System.out.println("Iterable Interface"+p);
+		});
+		
+		// sequential stream by the order it is inserted in the list. 
+		unsortedStreamList.stream().forEach(p-> System.out.println(p));
 		
 		
 		// List to Array 

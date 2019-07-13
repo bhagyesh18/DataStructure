@@ -40,7 +40,7 @@ public class MapProblems {
 	       return sortedHashMap;
 	  }
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		Map<Integer, Integer> unsortedKeymap=new HashMap<Integer, Integer>();
 		unsortedKeymap.put(232,23);
 		unsortedKeymap.put(2,23);
@@ -145,9 +145,12 @@ public class MapProblems {
 		}
 
 		
-		System.out.println(unSortedMapInt.values());
-		System.out.println(Collections.max(unSortedMapInt.values()));
+		System.out.println( Collections.max(unSortedMapInt.values()));
+		System.out.println(Collections.max(unSortedMapInt.keySet()));
 		
 	}
+	
+
+	
 
 }

@@ -1,5 +1,7 @@
 package PreffixSum;
 
+import java.util.Arrays;
+
 //https://app.codility.com/programmers/lessons/4-counting_elements/max_counters/
 
 public class MaxCounter {
@@ -44,7 +46,7 @@ public class MaxCounter {
 				    A[5] = 4;
 				    A[6] = 4;
 	
-        System.out.println(solution(5, A));				    
+        System.out.println(Arrays.toString(solution(5, A)));				    
 	
 	}
 
