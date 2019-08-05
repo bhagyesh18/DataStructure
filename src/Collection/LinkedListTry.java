@@ -30,6 +30,29 @@ public class LinkedListTry {
 		return head;
 	}
 
+	
+	// important leet
+	  public Node reverseList(Node head) {
+		  
+	        if(head==null || head.next==null) return head;
+	        Node returnHead=reverseList(head.next);
+	        head.next.next=head;
+	        head.next=null;
+	        return returnHead;       
+    }
+	//or 
+	public Node reverseIterative(Node head) {
+        Node pre=null;
+        Node save=head;
+        while(save!=null){
+           Node temp=save.next;
+            save.next=pre;
+            pre=save;
+            save=temp;
+        }
+        return pre;
+	}
+	
 	static void printLinked(Node head) {
 		Node save = head;
 		while (save != null) {

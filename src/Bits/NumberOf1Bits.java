@@ -54,6 +54,28 @@ public class NumberOf1Bits {
 	}
 	
 	
+	/* leetcode
+	 *  Input: 11111111111111111111111111111101          // -3 
+		Output: 10111111111111111111111111111111        //     -1073741825
+		In Java unsigned are represented as 2's complement so 
+	 */
+	public static int revereseBinary(int n) {
+		int mask=1;
+		int newNo=0;
+		int ind=31;
+		for (int i = 0; i < 32; i++) {
+			if((mask&n)!=0) {
+				newNo=newNo^(1<<ind);
+			}else {
+				
+			}
+			ind--;
+			mask<<=1;
+		}
+		return newNo;
+	}
+	
+	
 	
 	public static void main(String[] args) {
 		
@@ -61,7 +83,7 @@ public class NumberOf1Bits {
 		
 		System.out.println(hammingWeightOtherway(11));   // 1011 
 		
-		System.out.println(hammingWeightprint(11));   // 1011 
+		System.out.println(hammingWeightprint(2147483647));   // 1011 
 		
 		System.out.println(1<<1);
 		System.out.println(1<<2);
@@ -72,6 +94,8 @@ public class NumberOf1Bits {
 		System.out.println(1<<7);
 		System.out.println(1<<8);
 		System.out.println(1<<31);
+	
+		System.out.println(revereseBinary(-3));
 		
 	}
 

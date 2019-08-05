@@ -1,7 +1,7 @@
 package Static;
 
 class OuterClass {
-	private static String msg = "GeeksForGeeks";
+	 static String msg = "GeeksForGeeks";
 			// Static nested class 
 			public static class NestedStaticClass {
 				public void printMessage() {
@@ -15,6 +15,7 @@ class OuterClass {
 			}
 }
 
+
 class StaticClassDemo {
 	public static void main(String args[]) {
 
@@ -25,7 +26,10 @@ class StaticClassDemo {
 		OuterClass outer = new OuterClass();
 		OuterClass.InnerClass inner = outer.new InnerClass();
 
+		
+		
 		inner.display();
+		
 
 		OuterClass.InnerClass innerObject = new OuterClass().new InnerClass();
 

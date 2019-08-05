@@ -26,7 +26,7 @@ public class PrimeFactors {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-			findPrimeFactors(1);
+			findPrimeFactors(15);
 			System.out.println("");
 			findPrimeFactors(11);
 	}

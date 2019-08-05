@@ -10,6 +10,25 @@ interface A{
 	void b();
 }
 
+class ClassA implements A{
+	@Override
+	public void a() {
+		// TODO Auto-generated method stub
+		System.out.println("Class A a()");
+	}
+	@Override
+	public void b() {
+		// TODO Auto-generated method stub
+
+		System.out.println("Class A b()");
+	}
+	
+	public void getMessage() {
+		System.out.println("Class A says Hi");
+	}
+	
+}
+
 interface B extends A{
 	void c();
 	void d();
@@ -84,6 +103,9 @@ public class InterfaceAbstract extends AbstractA{
 			List<Integer> llll=new ArrayList<Integer>();
 			
 			
+			
+			A classa=new ClassA();
+			classa.a();
 	}
 
 	@Override

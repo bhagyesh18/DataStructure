@@ -26,8 +26,8 @@ public class IceCreamParlor {
 
 	public static void main(String[] args) throws IOException {
 
-		int[] arr = { 1, 4, 5, 3, 2 };
-		int[] result = icecreamParlor(4, arr);
+		int[] arr = { 1, 4, 5, 3, 3 };
+		int[] result = icecreamParlor(6, arr);
 		System.out.println(result[0]+" "+result[1]);
 	}
 }

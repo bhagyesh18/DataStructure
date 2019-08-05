@@ -9,6 +9,10 @@ public class Bits {
 			i=i>>=1;
 		}
 		System.out.println(count);
+		
+		
+		
+		
 	}
 	  public String convertToBase7(int num) {
 		     
@@ -26,5 +30,7 @@ public class Bits {
 	        return res;
 	        
 	    }
+
+	  
 
 }

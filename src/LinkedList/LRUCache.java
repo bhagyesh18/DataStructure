@@ -26,6 +26,7 @@ public class LRUCache {
 	        
 			this.capacity=capacity;
 		}
+		
 	    
 	    public int get(int key) {
 	     System.out.println("get-"+key);   

@@ -1,7 +1,7 @@
 package Bits;
 
 public class DecimanToBase7 {
-	  public String convertToBase7(int num) {
+	  public static String convertToBase7(int num) {
 		     
 	        String res="";
 	        if(num==0)
@@ -17,4 +17,9 @@ public class DecimanToBase7 {
 	        return res;
 	        
 	    }
+
+	  
+	  public static void main(String[] args) {
+		  System.out.println(convertToBase7(124));
+	  }
 }

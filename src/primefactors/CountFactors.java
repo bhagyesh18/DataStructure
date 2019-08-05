@@ -12,18 +12,20 @@ public class CountFactors {
 			if(N%i==0) {
 				if(i*i==N) {
 					factors+=1;
+					System.out.println(i*i);
 				}else {
 					factors+=2;
+					System.out.println(i*i+">");
 				}
 			}
 			i++;
 		}
-		
+
 		return factors;
 	}
 	
 	public static void main(String[] args) {
-			System.out.println(solution(24));
+			System.out.println(solution(12));
 	}
 
 }

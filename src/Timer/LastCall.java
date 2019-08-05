@@ -20,10 +20,11 @@ public class LastCall {
 	
 	public static void main(String[] args) {
 		LastCall l1=new LastCall();
-		l1.ping(1);
-		l1.ping(100);
-		l1.ping(3001);
-		l1.ping(3002);
+		System.out.println(		l1.ping(1));
+		System.out.println(l1.ping(100));
+		System.out.println(		l1.ping(3001));
+	System.out.println(	l1.ping(3002));
+	System.out.println(	l1.ping(3003));
 		
 		
 	}

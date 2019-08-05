@@ -48,7 +48,7 @@ public class Checkr {
 	public static void main(String[] args) {
 		String[] names= {"bhagyesh s patel","amit patel"};
 		System.out.println(solution(names, "bhagyesh p patel"));
-		
+	
 	}
 
 }

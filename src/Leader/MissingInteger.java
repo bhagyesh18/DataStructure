@@ -1,4 +1,4 @@
-package Practice;
+package Leader;
 
 import java.util.*;
 /*
@@ -51,8 +51,7 @@ public class MissingInteger {
 
 		         if(max==-1 && A[i]<=N && A[i]>=1)
 		        	 max=A[i]+1;
-		         
-		        System.out.println(min+" "+max);	 
+		          
 		      }
 		      if(min!=-1) {
 			      return min;
@@ -65,10 +64,36 @@ public class MissingInteger {
 		    }
 	   
 	   
+	   // leetcode simple because we know the length and range
+	   //   N(N+1)/2
+	   public static int findmissingGaussAlgoMath(int[] A) {
+		   int expectedSum=A.length*(A.length+1)/2;
+		   int actualSum=0;
+		   for (int i : A) {
+			  actualSum+=i;
+		   }
+		   return expectedSum-actualSum;
+	   }
+	   
+	   
+	   // leetcode using XOR opeartion 
+	   public static int findmissingXOR(int[] A) {
+		   int missing = A.length;
+	        for (int i = 0; i < A.length; i++) {
+	            missing ^= i ^ A[i];
+	        }
+	        return missing;
+	   }
+	   
+	   
 	   public static void main(String args[]) {
 		 int[]  A = {3,4,1}; 
 		 System.out.println(solution(A)); 
 		 System.out.println(solutionLinear(A)); 
+		 int[]  B = {3,4,1,0}; 
+		 System.out.println(findmissingGaussAlgoMath(B));
+
+		 System.out.println(findmissingXOR(B));
 	   }
 	   
 }

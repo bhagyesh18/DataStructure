@@ -2,8 +2,10 @@ package Collection;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.Stack;
 
 import javax.print.attribute.standard.Finishings;
+
 
 
 class BSTNode{
@@ -75,8 +77,6 @@ class BSTNode{
 		if(maxnode!=null) {
 			if(maxnode.right!=null) {
 				maxnode=findMax(maxnode.right);
-			}else {
-				return maxnode;
 			}
 		}
 		return maxnode;
@@ -120,9 +120,11 @@ class BSTNode{
 	}
 	
 	
+	// BFS 
 	// Print key each level
 	public static void levelOrder(BSTNode root) {
 	        LinkedList<BSTNode> queue=new LinkedList<BSTNode>();
+	        
 	        if(root==null){
 	            return ;
 	        }
@@ -235,13 +237,12 @@ class BSTNode{
 			return level;
 		}else {
 			int val=getLevelByKey(root.left, level+1, key);
-			if(val==0) {
-			}else {
+			if(val!=0) {
+		
 				return val;
 			}
 			int val1=getLevelByKey(root.right, level+1, key);
-			if(val1==0) {
-			}else {
+			if(val1!=0) {
 				return val1;
 			}
 			return 0;
@@ -274,7 +275,7 @@ class BSTNode{
 	        }
 	        
 	        return ISBST(root.left,min,root.key-1) && ISBST(root.right,root.key+1,max) ;
-	    }
+	   }
 	
 	    
 	    static int  min = Integer.MAX_VALUE;
@@ -298,6 +299,40 @@ class BSTNode{
 		      }
 		  }
 	    
+		  
+		  private int sum=0;
+		  public BSTNode convertToGreaterTreeRec(BSTNode root) {
+		        if (root != null) {
+		            convertToGreaterTreeRec(root.right);
+		            sum += root.key;
+		            root.key = sum;
+		            convertToGreaterTreeRec(root.left);
+		        }
+		        return root;
+		    }
+		    
+		    public BSTNode converttoGreaterTree(BSTNode root) {
+		        int sum = 0;
+		        BSTNode node = root;
+		        Stack<BSTNode> stack = new Stack<BSTNode>();
+
+		        while (!stack.isEmpty() || node != null) {
+		            while (node != null) {
+		                stack.add(node);
+		                node = node.right;
+		            }
+
+		            node = stack.pop();
+		            sum += node.key;
+		            node.key = sum;
+
+		            node = node.left;
+		        }
+
+		        return root;
+		    }
+		  
+		  
 }
 
 

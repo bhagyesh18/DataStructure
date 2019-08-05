@@ -37,8 +37,8 @@ public class FindLeader {
 	
 		public static void main(String[] args) {
 			
-		//	int[] A= {1,2,2,2,1,1,1,3,4,5};
-			int[] A= {1,2,5,2,1,89,6,1,5,3,1,89};
+			int[] A= {1,2,2,2,1,1,1,3,4,5};
+		//	int[] A= {1,2,5,2,1,89,6,1,5,3,1,89};
 			
 			System.out.println(solution(A));
 			

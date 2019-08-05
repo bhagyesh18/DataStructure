@@ -19,6 +19,7 @@ public class Anagram {
 			for(char c1 : str1charArray) {
 				if(hashStr1.containsKey(c1)) {
 					hashStr1.put(c1,hashStr1.get(c1)+1);
+					
 				}else {
 					hashStr1.put(c1,1);
 				}

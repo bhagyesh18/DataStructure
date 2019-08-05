@@ -61,7 +61,6 @@ public class ListProblems {
 		// sequential stream by the order it is inserted in the list. 
 		unsortedStreamList.stream().forEach(p-> System.out.println(p));
 		
-		
 		// List to Array 
 		Integer[] toArray=unsortedStreamList.toArray(new Integer[0]);
 		System.out.println();
@@ -75,7 +74,12 @@ public class ListProblems {
 		List<Integer> stcklist=new Stack<Integer>();
 		stcklist.add(null);
 		System.out.println(stcklist);
+	
+	
 		
 	}
+	
+	
+	
 
 }

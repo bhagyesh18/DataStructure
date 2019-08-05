@@ -24,22 +24,7 @@ public class SumBetweenNodes {
 	    }
 	    
 	    
-	    // not relevant
-	    public static void dfsusingstack(TreeNode root) {
-	    	Stack<TreeNode> stack=new Stack<TreeNode>();
-	    	stack.push(root);
-	    	while(stack.size()!=0) {
-	    		TreeNode node=stack.pop();
-	    		System.out.print(node.val+" ");
-	    		if(node.left!=null)
-	    			stack.push(node.left);
-	    		if(node.right!=null)
-	    			stack.push(node.right);
-	    	}
-	    	
-	    	
-	    	
-	    }
+
 	
 	public static void main(String[] args) {
 		TreeNode root=new TreeNode(15);
@@ -50,7 +35,7 @@ public class SumBetweenNodes {
 		root.right.left=new TreeNode(19);
 		root.right.right=new TreeNode(23);
 		System.out.println(rangeSumBST(root, 9, 15));
-		dfsusingstack(root);
+	
 	}
 
 }

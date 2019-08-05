@@ -1,6 +1,10 @@
 package Collection;
 
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
+import java.util.Set;
+
 
 class BTNode {
 	int key;
@@ -69,6 +73,12 @@ class BTNode {
 		if(root==null) {
 			return 0;
 		}else {
+			
+			// Put this code to make index 0
+//			 if(root.left==null && root.right==null){
+//	                return 0;
+//	            }
+			
 			int l=heightTree(root.left);
 			int r=heightTree(root.right);
 			
@@ -288,6 +298,36 @@ class BTNode {
 	         invertTree(root.right);
 	    }
 	
+	     
+	     public void printParentOfNode(BTNode root, BTNode node) {
+	    	 Map<BTNode,BTNode> mapParent=new HashMap<BTNode, BTNode>();
+	    	 mapParent.put(node,null);
+	    	 mapParentsNodeDFS(root, mapParent);
+	    	
+		    	while(node!=null) {
+		    		System.out.println(node.key);
+		    		node=mapParent.get(node);
+		    	}
+	    	 
+	    	 
+	     }
+	     public void mapParentsNodeDFS(BTNode root,Map<BTNode, BTNode> mapParent) {
+	    	 if(root==null) {
+	    		 return;
+	    	 }
+	    	 if(root.left!=null) {
+	    		 mapParent.put(root.left,root);
+	    		 mapParentsNodeDFS(root.left, mapParent);
+	    	 }
+	    	 if(root.right!=null) {
+	    		 mapParent.put(root.right,root);
+	    		 mapParentsNodeDFS(root.right, mapParent);
+	    	 }	 
+	     }
+	 
+	     
+	  
+	     
 	
 }
 
@@ -334,6 +374,8 @@ public class BinaryTreeDemo {
 		
 		System.out.println("\nGet level for key getLevelByKey(bt,1,14) :"+ 	bt.getLevelByKey(bt, 1, 14));
 		System.out.println("is Even Tree :"+ 	bt.isevenTree(bt));
+		
+		bt.printParentOfNode(bt, bt.left.right);
 		
 		
 /*		

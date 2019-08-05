@@ -2,6 +2,8 @@ package GCDLCM;
 
 public class Ladder {
 
+	
+	// different ways to take steps on ladder 
 	public static int[] solution(int[] A, int[] B) {
 		int[] result = new int[A.length];
 		
@@ -28,6 +30,7 @@ public class Ladder {
         }
 		
 		for (int i = 0; i < A.length; i++) {
+			System.out.println(fibonacci[A[i]]  +" "+(int) Math.pow(2, B[i]));
 			result[i] = (fibonacci[A[i]]) %(int) Math.pow(2, B[i]);
 		}
 

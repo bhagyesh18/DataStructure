@@ -21,7 +21,6 @@ public class StoneWall {
                     stk.push(H[i]);
                 }        
         }
-        
         return counter;   
     }
 	

@@ -58,6 +58,7 @@ public class EqualStack {
 		 String[] token=s.split(":");
          int hours=Integer.parseInt(token[0]);
          String newHours="";
+        
          if(token[2].substring(2,4).equals("PM")){
                    if(hours==12) {
                 	   newHours=""+hours+":"+token[1]+":"+token[2].substring(0,2);   

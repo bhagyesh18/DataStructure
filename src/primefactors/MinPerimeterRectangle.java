@@ -23,7 +23,7 @@ public class MinPerimeterRectangle {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-			System.out.println(solution(4564320));
+			System.out.println(solution(50));
 	}
 
 }

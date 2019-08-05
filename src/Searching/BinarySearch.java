@@ -21,7 +21,7 @@ public class BinarySearch {
 	}
 	public static void main(String[] args) {
 		int[] arr= {1,3,8,12,16,20,30,40,60};
-		int res=binarySearch(arr, 99);
+		int res=binarySearch(arr, 16);
 		if(res==-1) {
 			System.out.print("Element is not available in the Array");
 		}else {

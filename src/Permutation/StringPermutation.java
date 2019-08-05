@@ -8,13 +8,12 @@ public class StringPermutation {
 			System.out.println(prefix);
 		}else {
 			for (int i = 0; i < str.length(); i++) {
-				String rem=str.substring(0,i)+str.substring(i+1);
+				String rem=str.substring(0,i)+str.substring(i+1);    
 				permutation(rem, prefix+str.charAt(i));
 			}
 		}
 	}
-	
-	
+		
 	private void permute(String str, int l, int r) 
     { 
         if (l == r) 
@@ -43,7 +42,7 @@ public class StringPermutation {
 	
 		String str="ABC";
 		permutation(str, "");
-		StringPermutation.permutation(str, "");
+	//	StringPermutation.permutation(str, "");
 	}
 
 }
