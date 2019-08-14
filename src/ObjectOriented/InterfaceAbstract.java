@@ -63,9 +63,13 @@ abstract class AbstractA implements A{
 		// TODO Auto-generated method stub
 		
 	}
+	
+	public void definedMethod() {
+		
+	}
 }
 
-class BInterface implements B {
+class BInterface implements B,A {
 
 	@Override
 	public void a() {
@@ -119,5 +123,5 @@ public class InterfaceAbstract extends AbstractA{
 		// TODO Auto-generated method stub
 		
 	}
-
+	
 }

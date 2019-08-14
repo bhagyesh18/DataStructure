@@ -13,6 +13,7 @@ public class ThreadClassDemo {
 		      
 		      System.out.println("Starting thread3...");
 		      Thread thread3 = new GuessANumber(27);
+		      thread3.setName("Bhagyesh Thread");
 		      thread3.start();
 		      try {
 		         thread3.join();
@@ -25,5 +26,14 @@ public class ThreadClassDemo {
 		      
 		      thread4.start();
 		      System.out.println("main() is ending...");
+		  
+		      
+		      Runnable rr= new DisplayMessage("bhagyesh Called ");
+		      rr.run();
+		      
+		      GuessANumber ga=new GuessANumber(10);
+		      ga.setName("BHagyesh new thread");
+		      ga.start();
+		      
 		   }
 }

@@ -143,7 +143,11 @@ public class MapProblems {
 		for(Map.Entry<Integer, Integer> me: setEntry) {
 			System.out.println(me.getKey() +"<>"+me.getValue());
 		}
+		for(Map.Entry<Integer, Integer> me: unSortedMapInt.entrySet()) {
+			System.out.println(me.getKey() +"<>"+me.getValue());
+		}
 
+		
 		
 		System.out.println( Collections.max(unSortedMapInt.values()));
 		System.out.println(Collections.max(unSortedMapInt.keySet()));

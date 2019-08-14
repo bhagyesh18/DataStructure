@@ -9,6 +9,7 @@ public class DeadLockSituation {
 	      ThreadDemo1 T1 = new ThreadDemo1();
 	      ThreadDemo2 T2 = new ThreadDemo2();
 	      T1.start();
+	      Thread.sleep(2000);
 	      T2.start();
 	      
 	      Thread.sleep(5000);

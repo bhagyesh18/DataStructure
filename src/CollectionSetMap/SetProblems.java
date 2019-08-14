@@ -6,9 +6,11 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
+
 
 
 //HashSet:
@@ -80,7 +82,10 @@ public class SetProblems {
 			System.out.println("--"+listiterator.next());
 		}
 		
-		
+		ListIterator< Integer> listi=setReverseOrder.listIterator();
+		while(listi.hasPrevious()) {
+			System.out.println(listi.previous());
+		}
 		
 	}
 

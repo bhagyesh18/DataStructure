@@ -22,23 +22,19 @@ synchronized(objectidentifier) {
 }
  */
 
-
 class PrintDemo {
-	   public void printCount() {
-	      try {
-	         for(int i = 5; i > 0; i--) {
-	            System.out.println("Counter   ---   "  + i );
-	         }
-	      } catch (Exception e) {
-	         System.out.println("Thread  interrupted.");
-	      }
-	   }
+	public void printCount() {
+		try {
+			for (int i = 5; i > 0; i--) {
+				System.out.println("Counter   ---   " + i);
+			}
+		} catch (Exception e) {
+			System.out.println("Thread  interrupted.");
+		}
 	}
+}
 
-	
-
-
-   // With Synchrnized Method 
+// With Synchrnized Method
 //   class ThreadDemo extends Thread {
 //	   private Thread t;
 //	   private String threadName;
@@ -63,53 +59,173 @@ class PrintDemo {
 //	   }
 //	}
 
-
 // With Synchronized MEthod 
-   class ThreadDemo extends Thread {
-	   private Thread t;
-	   private String threadName;
-	   PrintDemo  PD;
+class ThreadDemo extends Thread {
+	private Thread t;
+	private String threadName;
+	PrintDemo PD;
 
-	   ThreadDemo( String name,  PrintDemo pd) {
-	      threadName = name;
-	      PD = pd;
-	   }
-	   
-	   public void run() {
-		   synchronized(PD) {
-	         PD.printCount();
-	      }
-	      System.out.println("Thread " +  threadName + " exiting.");
-	   }
-
-	   public void start () {
-	      System.out.println("Starting " +  threadName );
-	      if (t == null) {
-	         t = new Thread (this, threadName);
-	         t.start ();
-	      }
-	   }
-	}
-   
-   class SynchronizedThread {
-	   public static void main(String args[]) throws InterruptedException {
-
-	      PrintDemo PD = new PrintDemo();
-
-	      ThreadDemo T1 = new ThreadDemo( "Thread - 1 ", PD );
-	      ThreadDemo T2 = new ThreadDemo( "Thread - 2 ", PD );
-
-	      T1.start();
-	      T2.start();
-
-	      // wait for threads to end
-	         try {
-	      //   T1.join();
-	       //  T2.join();
-	      } catch ( Exception e) {
-	         System.out.println("Interrupted");
-	      }
-	   }
+	ThreadDemo(String name, PrintDemo pd) {
+		threadName = name;
+		PD = pd;
 	}
 
+	public void run() {
+		synchronized (PD) {
+			PD.printCount();
+		}
+		System.out.println("Thread " + threadName + " exiting.");
+	}
 
+	public void start() {
+		System.out.println("Starting " + threadName);
+		if (t == null) {
+			t = new Thread(this, threadName);
+			t.start();
+		}
+	}
+}
+
+class SynchronizedThread {
+	public static void main(String args[]) throws InterruptedException {
+
+		PrintDemo PD = new PrintDemo();
+
+		ThreadDemo T1 = new ThreadDemo("Thread - 1 ", PD);
+		ThreadDemo T2 = new ThreadDemo("Thread - 2 ", PD);
+
+		T1.start();
+		T2.start();
+
+		// wait for threads to end
+		try {
+			// T1.join();
+			// T2.join();
+		} catch (Exception e) {
+			System.out.println("Interrupted");
+		}
+	}
+}
+
+// another demo from java point
+//when you make method a synchonized, lock will applied to the object
+class NumberPrint {
+	synchronized void printmap(int n) {// 
+		for (int i = 1; i <= 3; i++) {
+			System.out.println(n + i);
+			try {
+				Thread.sleep(400);
+			} catch (Exception e) {
+				System.out.println(e);
+			}
+		}
+
+	}
+}
+
+class SycnDemo {
+	public static void main(String args[]) {
+		final NumberPrint obj = new NumberPrint();// only one object
+
+		Thread t1 = new Thread() {
+			public void run() {
+				obj.printmap(5);
+			}
+		};
+		Thread t2 = new Thread() {
+			public void run() {
+				obj.printmap(100);
+			}
+		};
+
+		t1.start();
+		t2.start();
+	}
+}
+
+// Sychronization block and object 
+//when you make method a synchonized, lock will applied to the object
+class PrintFile {
+
+	void writefile(int n) {
+		synchronized (this) {
+			for (int i = 1; i <= 4; i++) {
+				System.out.println(n * i);
+				try {
+					Thread.sleep(300);
+				} catch (Exception e) {
+					System.out.println(e);
+				}
+			}
+		}
+	}
+}
+
+class SyncBlock {
+	public static void main(String args[]) {
+		final PrintFile obj = new PrintFile();// only one object
+
+		Thread t1 = new Thread() {
+			public void run() {
+				obj.writefile(5);
+			}
+		};
+		Thread t2 = new Thread() {
+			public void run() {
+				obj.writefile(100);
+			}
+		};
+
+		t1.start();
+		t2.start();
+	}
+}
+
+// Synchronized Static 
+// when you make static method a synchonized, lock will applied to the Class not object 
+class Table {
+  // 
+	synchronized static void printTable(int n) {
+		for (int i = 1; i <= 10; i++) {
+			System.out.println(n * i);
+			try {
+				Thread.sleep(400);
+			} catch (Exception e) {
+			}
+		}
+	}
+}
+
+class SyncStatic {
+	public static void main(String[] args) {
+
+		Thread t1 = new Thread() {
+			public void run() {
+				Table.printTable(1);
+			}
+		};
+
+		Thread t2 = new Thread() {
+			public void run() {
+				Table.printTable(10);
+			}
+		};
+
+		Thread t3 = new Thread() {
+			public void run() {
+				Table.printTable(100);
+			}
+		};
+
+		Thread t4 = new Thread() {
+			public void run() {
+				Table.printTable(1000);
+			}
+		};
+		t1.start();
+		t2.start();
+		t3.start();
+		t4.start();
+
+	}
+}

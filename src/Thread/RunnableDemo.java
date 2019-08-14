@@ -16,7 +16,7 @@ class RunnablethreadDemo implements Runnable {
 	         for(int i = 4; i > 0; i--) {
 	            System.out.println("Thread: " + threadName + ", " + i);
 	            // Let the thread sleep for a while.
-	            Thread.sleep(50);
+	            Thread.sleep(5000);
 	         }
 	      } catch (InterruptedException e) {
 	         System.out.println("Thread " +  threadName + " interrupted.");
@@ -31,21 +31,15 @@ class RunnablethreadDemo implements Runnable {
 	   public void start () {
 	      System.out.println("Starting " +  threadName );
 	      if (t == null) {
+	    	  
+	    	 // This line actuall created Runnable object and invoke run method. 
 	         t = new Thread (this, threadName);
 	         t.start ();
 	      }
 	   }
 }
 
-class RunnableDemo2 implements Runnable{
-	@Override
-	public void run() {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	
-}
+
 
 
 public class RunnableDemo {
@@ -58,9 +52,11 @@ public class RunnableDemo {
 	      RunnablethreadDemo R2 = new RunnablethreadDemo( "Thread-2");
 	      R2.start();
 	      
+	      GuessANumber gs=new GuessANumber(78);
+	      gs.start();
 	      
 	      Runnable r1=()->System.out.println("hello");
-	      
+	      r1.run();
 	    
 	}
 

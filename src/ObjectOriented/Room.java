@@ -3,16 +3,19 @@ import java.io.IOException;
 
 class Building {
 	
+	int id;
 	public void getMessage() throws IOException {
 		System.out.println("Building Object");
 	}
 	
+	
 }
 class Office2 extends Building {
-	
+	int id;
 	public void getMessage() throws IOException {
 		System.out.println("ofice Object");
 	}
+	
 	
 }
 
