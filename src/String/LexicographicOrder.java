@@ -24,7 +24,8 @@ public class LexicographicOrder {
 		System.out.println("ababaaa".compareTo("baaa"));
 		System.out.println("cbabaaa".compareTo("baaa"));
 		System.out.println("baaa".compareTo("babaaa"));
-		
+		System.out.println("baaa".compareTo("baaa"));
+			
 		
 		
 	}

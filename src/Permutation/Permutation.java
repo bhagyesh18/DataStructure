@@ -46,7 +46,7 @@ public class Permutation {
     // Driver code 
     public static void main(String args[]) 
     { 
-        int a[] = {1,2,3}; 
+        int a[] = {1,2,3,4}; 
         heapPermutation(a, a.length, a.length); 
     } 
 }

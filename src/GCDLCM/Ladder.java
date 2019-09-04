@@ -1,5 +1,7 @@
 package GCDLCM;
 
+import java.util.Arrays;
+
 public class Ladder {
 
 	
@@ -16,7 +18,9 @@ public class Ladder {
         for (int i = 0; i < L; i++) {
             max = Math.max(A[i], max);
         }
-        
+       
+
+        		
         int[] fibonacci = new int[max+1]; 
         
         fibonacci[0] =1;

@@ -332,6 +332,25 @@ class BSTNode{
 		        return root;
 		    }
 		  
+		    
+		    public  void dfsStack(BSTNode root) {
+		    	
+		    	 Stack<BSTNode> stack = new Stack<BSTNode>();
+		    	 BSTNode node=root;
+		    	 
+		    	 while(!stack.isEmpty() || node!=null) {
+		    		 while(node!=null) {
+		    			 System.out.println(node.key);
+		    			 stack.add(node);
+		    			 node=node.left;
+		    		 }
+		    		 node=stack.pop();
+		    		 node=node.right;
+		    	 }
+		    }
+		    
+		 
+		    
 		  
 }
 
@@ -381,9 +400,7 @@ public class BinarySearchTreeDemo {
 		
 			System.out.println("is Even Tree :"+ 	bsetTree.isevenTree(bsetTree));
 			
-			
-
-			
+				bsetTree.dfsStack(bsetTree);
 			
 			
 			/*

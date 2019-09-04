@@ -15,7 +15,7 @@ public class PairElementEqualGivenNumber {
 		int[] array= {4,5,7,8,9,11,12, 13};
 	    Arrays.sort(array);
 		int givenNumber=20;
-	    boolean flag=false;
+	
 		int i=0,j=array.length-1;
 		while(i<array.length && i<j) {
 			while(array[i]+array[j]>givenNumber && j>0) j--;

@@ -9,7 +9,7 @@ public class IndexOf {
 		
 		System.out.println(name.indexOf("patel"));
 		System.out.println(name.indexOf("patel")>=0);
-		System.out.println(name.indexOf("patfel"));
+		System.out.println(name.indexOf("patfhjkel"));
 		System.out.println(name.indexOf("patsel")>=0);
 		
 				

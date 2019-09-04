@@ -82,7 +82,7 @@ public class LRUCache {
 	     		if(node.next==null)
 	     			tail=node.prev;
 	     		else
-	     			node.prev.next=node.prev;
+	     			node.next.prev=node.prev;
 	     		
 	     		if(tail!=null)
 	     			tail.next=node;

@@ -41,7 +41,7 @@ public class LinkedListCol {
 		ll.pollFirst();
 		ll.pollLast();
 		ll.pop();
-
+	
 		ll.clear();
 		
         LinkedList<Integer> linkedList2 = new LinkedList<Integer>();

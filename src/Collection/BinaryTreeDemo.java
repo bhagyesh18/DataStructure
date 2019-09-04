@@ -58,7 +58,7 @@ class BTNode {
 		int current = root.key;
 		int leftVal = findMax(root.left);
 		int rightVal = findMax(root.right);
-		if (current > leftVal) {
+		if (current < leftVal) {
 			current = leftVal;
 		}
 		if (current < rightVal) {

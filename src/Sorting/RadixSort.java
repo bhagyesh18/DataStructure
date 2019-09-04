@@ -7,7 +7,7 @@ public class RadixSort {
 
 	public static int[] sorting(int[] arr) {
 		int max=Arrays.stream(arr).max().getAsInt();
-		for(int exp=1;max/exp>0;exp++)
+		for(int exp=1;max/exp>0;exp*=10)
 			countSort(arr,arr.length,exp);
 		
 		return arr;

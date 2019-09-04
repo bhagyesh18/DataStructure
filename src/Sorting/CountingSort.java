@@ -53,15 +53,13 @@ public class CountingSort {
 	}
 	
 	
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
 		int[] A= {1,3,5,2,1,9,7};
 		A=sorting(A);
 		System.out.println(Arrays.toString(A));
-	
 		System.out.println(sortingString("bhagyeshbhpaatell"));	
-		
 	}
 
 }

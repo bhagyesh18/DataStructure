@@ -24,7 +24,6 @@ public class Combination {
 			arr[i-1]=i;
 		}
 		 combinationRec(arr, data, 0, n-1, 0, subset);
-	        
 	  }
 	  public static void combinationRec(int[] arr,int[] data, int start,int end, int index,int subset) {
 		  
@@ -44,7 +43,7 @@ public class Combination {
 	  
 	  
 	public static void main(String[] args) {
-			combination(6, 2);
+			combination(6, 3);
 			// 1*2*3*4*5*6
 	}
 

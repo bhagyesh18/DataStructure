@@ -92,6 +92,7 @@ public class MissingInteger {
 		 System.out.println(solutionLinear(A)); 
 		 int[]  B = {3,4,1,0}; 
 		 System.out.println(findmissingGaussAlgoMath(B));
+		 System.out.println(findmissingGaussAlgoMath(A));
 
 		 System.out.println(findmissingXOR(B));
 	   }
