@@ -326,9 +326,77 @@ class BTNode {
 	     }
 	 
 	     
-	  
+	     // diameter leet
+//	     			1
+//	     		2	    4
+//	         3     5
+//	        Ans 3= [3,2,1,4]   or [5,2,1,4] 
+//	     diameter of the tree. 
+//	     length of the longest path between ANY two node 
+//	     It may include root or not.   
+//	     
 	     
+	     int ans;
+	     public int diameterOfBinaryTree(BTNode root) {
+	         ans = 1;
+	         depth(root);
+	         return ans - 1;
+	     }
+	     public int depth(BTNode node) {
+	         if (node == null) return 0;
+	         int L = depth(node.left);
+	         int R = depth(node.right);
+	         ans = Math.max(ans, L+R+1);
+	          return Math.max(L, R) + 1;
+	     }
+	     
+	     
+	     
+	     // isSymmetric Tree
+		//	     1
+		//	     / \
+		//	    2   2
+		//	   / \ / \
+		//	  3  4 4  3
+	     
+	     public boolean isSymmetric(BTNode root) {
+	         if(root==null)
+	             return true;
+	         if(root.left==null && root.right==null)
+	               return true;
+	         
+	         return DFS(root.left,root.right);
+	     }
+
+		public boolean DFS(BTNode root1, BTNode root2) {
+			if (root1 == null && root2 == null)
+				return true;
 	
+			if (root1 == null && root2 != null)
+				return false;
+	
+			if (root1 != null && root2 == null)
+				return false;
+	
+			boolean ans = true;
+	
+			if (root1.key != root2.key)
+				return false;
+	
+			ans = DFS(root1.left, root2.right);
+			if (ans == false)
+				return false;
+	
+			ans = DFS(root1.right, root2.left);
+			return ans;
+		}
+		     
+	
+	     
+		
+		
+	     
+	     
 }
 
 public class BinaryTreeDemo {
@@ -399,7 +467,6 @@ Get level for key getLevelByKey(bt,1,14) :3
 is Even Tree :true
 		
 	*/	
-		
 		
 	}
 
